@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.fragment.DashboardFragment" >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tvWelcome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="Welcome"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="@+id/ivNotification"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/ivNotification" />
+
+            <ImageView
+                android:id="@+id/ivNotification"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:src="@drawable/notification"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cvBalance"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/card_gradient"
+                android:elevation="0dp"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="0dp"
+                app:cardPreventCornerOverlap="false"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvWelcome">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/card_gradient">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:orientation="vertical"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Available Balance"
+                            android:textAlignment="center"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/tvAvailableBalance"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="0"
+                            android:textAlignment="center"
+                            android:textColor="@color/black"
+                            android:textSize="26sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintGuide_percent="0.50"
+                app:layout_constraintHorizontal_bias="0.50"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView2"
+                android:layout_width="0dp"
+                android:layout_height="150dp"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/card_gradient"
+                android:elevation="0dp"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="0dp"
+                app:cardPreventCornerOverlap="false"
+                app:layout_constraintEnd_toStartOf="@+id/guideline"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/cvBalance">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#C1ADC6A8">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:orientation="vertical"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/income" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Income"
+                            android:textAlignment="center"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/tvIncome"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="0"
+                            android:textAlignment="center"
+                            android:textColor="@color/black"
+                            android:textSize="26sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="150dp"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/card_gradient"
+                android:elevation="0dp"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="0dp"
+                app:cardPreventCornerOverlap="false"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/guideline"
+                app:layout_constraintTop_toBottomOf="@id/cvBalance">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#9AD29C9C">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:orientation="vertical"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/expense" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Expense"
+                            android:textAlignment="center"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/tvExpense"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="0"
+                            android:textAlignment="center"
+                            android:textColor="@color/black"
+                            android:textSize="26sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Recent Transaction"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_marginTop="16dp"
+                android:layout_marginHorizontal="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cardView2" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvRecentTransactions"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+            <ProgressBar
+                android:id="@+id/pbDashboardFragment"
+                style="?android:attr/progressBarStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="@+id/rvRecentTransactions"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/rvRecentTransactions"
+                app:layout_constraintTop_toTopOf="@+id/rvRecentTransactions" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
